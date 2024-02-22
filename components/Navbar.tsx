@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <div className="bg-inherit flex justify-between items-center h-20 my-2 max-w-[1240px] mx-auto px-4 text-white">
       {/* Logo */}
-      <Image src={"/acesggscc.github.io/ace.png"} alt="ace logo" width={"60"} height={"50"}/>
+      <Image src={"/ace.png"} alt="ace logo" width={"60"} height={"50"}/>
       {/* Desktop Navigation */}
       <ul className="hidden md:flex">
         {navItems.map((item) => (
