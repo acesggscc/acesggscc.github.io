@@ -28,7 +28,7 @@ export default function Navbar() {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className="p-4 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black"
+            className="p-4 hover:bg-gray-950 rounded-xl m-2 cursor-pointer duration-300"
           >
             <Link href={`/${item.href}`}>{item.text}</Link>
           </li>
@@ -56,7 +56,7 @@ export default function Navbar() {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className="p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600"
+            className="p-4 border-b rounded-xl hover:bg-gray-950 duration-300 cursor-pointer border-gray-600"
           >
             {item.text}
           </li>
