@@ -14,24 +14,32 @@ export default function Navbar() {
 
   // Array containing navigation items
   const navItems = [
-    { id: 1, text: "Home", href: "" },
-    { id: 2, text: "Company", href: "" },
-    { id: 3, text: "Resources", href: "" },
+    { id: 1, text: "Home", href: "/" },
+    { id: 2, text: "Blog", href: "/blog" },
+    { id: 3, text: "Resources", href: "/resources" },
+    { id: 4, text: "Team", href: "/team" },
+    { id: 5, text: "Contact", href: "/about" },
   ];
 
   return (
     <div className="bg-inherit flex justify-between items-center h-20 my-2 max-w-[1240px] mx-auto px-4 text-white">
       {/* Logo */}
-      <Image src={"/ace.png"} alt="ace logo" width={"60"} height={"50"}/>
+      <Image
+        src={"/acesggscc.github.io/ace.png"}
+        alt="ace logo"
+        width={"60"}
+        height={"50"}
+      />
       {/* Desktop Navigation */}
       <ul className="hidden md:flex">
         {navItems.map((item) => (
-          <li
-            key={item.id}
-            className="p-4 hover:bg-gray-950 rounded-xl m-2 cursor-pointer duration-300"
-          >
-            <Link href={`/${item.href}`}>{item.text}</Link>
-          </li>
+          <Link key={item.id} href={`/${item.href}`}>
+            <li
+              className="p-4 hover:bg-gray-950 rounded-xl m-2 cursor-pointer duration-300"
+            >
+              {item.text}
+            </li>
+          </Link>
         ))}
       </ul>
 
@@ -49,17 +57,23 @@ export default function Navbar() {
         }
       >
         {/* Mobile Logo */}
-      <Image className="m-4" src={"/ace.png"} alt="ace logo" width={"60"} height={"50"}/>
-
+        <Image
+          className="m-4"
+          src={"/acesggscc.github.io/ace.png"}
+          alt="ace logo"
+          width={"60"}
+          height={"50"}
+        />
 
         {/* Mobile Navigation Items */}
         {navItems.map((item) => (
-          <li
-            key={item.id}
-            className="p-4 border-b rounded-xl hover:bg-gray-950 duration-300 cursor-pointer border-gray-600"
-          >
-            {item.text}
-          </li>
+          <Link key={item.id} href={`/${item.href}`}>
+            <li
+              className="p-4 border-b rounded-xl hover:bg-gray-950 duration-300 cursor-pointer border-gray-600"
+            >
+              {item.text}
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
