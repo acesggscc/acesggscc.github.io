@@ -18,7 +18,7 @@ export default function Navbar() {
     { id: 2, text: "Blog", href: "/blog" },
     { id: 3, text: "Resources", href: "/resources" },
     { id: 4, text: "Team", href: "/team" },
-    { id: 5, text: "Contact", href: "/about" },
+    { id: 5, text: "Contact", href: "/contact" },
   ];
 
   return (
@@ -33,7 +33,7 @@ export default function Navbar() {
       {/* Desktop Navigation */}
       <ul className="hidden md:flex">
         {navItems.map((item) => (
-          <Link key={item.id} href={`/${item.href}`}>
+          <Link key={item.id} href={`${item.href}`}>
             <li
               className="p-4 hover:bg-gray-950 rounded-xl m-2 cursor-pointer duration-300"
             >
@@ -67,7 +67,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Items */}
         {navItems.map((item) => (
-          <Link key={item.id} href={`/${item.href}`}>
+          <Link key={item.id} href={`${item.href}`}>
             <li
               className="p-4 border-b rounded-xl hover:bg-gray-950 duration-300 cursor-pointer border-gray-600"
             >
